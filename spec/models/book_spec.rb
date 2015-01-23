@@ -25,6 +25,11 @@ RSpec.describe Book, :type => :model do
     expect(book).to be_invalid
   end
 
+  it "is invalid without a summary" do 
+    book = FactoryGirl.build(:book, summary: nil)
+    expect(book).to be_invalid
+  end
+
 
 
 end
