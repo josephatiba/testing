@@ -30,6 +30,11 @@ RSpec.describe Book, :type => :model do
     expect(book).to be_invalid
   end
 
+  it "is invalid without a pagecount that is a Fixnum" do 
+    book = FactoryGirl.build(:book, pagecount: 1)
+    expect(book.pagecount).to be_instance_of(Fixnum)
+  end
+
 
 
 end

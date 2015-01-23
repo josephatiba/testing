@@ -4,5 +4,6 @@ class Book < ActiveRecord::Base
   validates :subject, presence: true
   validates :genre, presence: true
   validates :summary, presence: true
+  validates :pagecount, presence: true
 
 end
