@@ -15,6 +15,12 @@ RSpec.describe Book, :type => :model do
     expect(book).to be_invalid
   end
 
+  it "is invalid without an subject" do 
+    book = FactoryGirl.build(:book, subject: nil)
+    expect(book).to be_invalid
+  end
+
+
 
 
 end
